@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ascendantapex/zoncute-site
   branch: main
-  base_url: https://REPLACE-WITH-WORKER-URL.workers.dev
+  base_url: https://zoncute-cms-auth.josemiguelpineiroperez.workers.dev
   auth_endpoint: auth
 
 media_folder: "images"
@@ -13,13 +13,13 @@ collections:
     label: "Productos"
     files:
       - name: "catalog"
-        label: "Catálogo (los 5 productos)"
+        label: "Catalogo (los 5 productos)"
         file: "products.json"
         fields:
           - label: "Productos"
             name: "products"
             widget: "list"
-            summary: "{{fields.title}} — ${{fields.priceNow}}"
+            summary: "{{fields.title}}"
             fields:
               - { label: "ID interno", name: "id", widget: "string" }
               - label: "Tipo de flor"
@@ -28,20 +28,20 @@ collections:
                 options: ["daisy", "pansy"]
               - { label: "Imagen", name: "img", widget: "image" }
               - { label: "Texto alternativo de la imagen", name: "alt", widget: "string" }
-              - { label: "Número de placa (01, 02...)", name: "plateNo", widget: "string" }
-              - { label: "Título del producto", name: "title", widget: "string" }
-              - label: "Especificaciones (número + etiqueta)"
+              - { label: "Numero de placa", name: "plateNo", widget: "string" }
+              - { label: "Titulo del producto", name: "title", widget: "string" }
+              - label: "Especificaciones"
                 name: "specs"
                 widget: "list"
                 fields:
-                  - { label: "Número", name: "value", widget: "string" }
+                  - { label: "Numero", name: "value", widget: "string" }
                   - { label: "Etiqueta", name: "unit", widget: "string" }
-              - label: "Las 5 características"
+              - label: "Las 5 caracteristicas"
                 name: "features"
                 widget: "list"
-                field: { label: "Característica", name: "feature", widget: "string" }
+                field: { label: "Caracteristica", name: "feature", widget: "string" }
               - { label: "Precio actual (USD)", name: "priceNow", widget: "number", value_type: "float" }
               - { label: "Precio de lista (USD)", name: "priceWas", widget: "number", value_type: "float" }
               - { label: "Rating (0 a 5)", name: "rating", widget: "number", value_type: "float", min: 0, max: 5 }
-              - { label: "Número de reseñas", name: "reviews", widget: "number", value_type: "int" }
+              - { label: "Numero de resenas", name: "reviews", widget: "number", value_type: "int" }
               - { label: "Link de Amazon", name: "url", widget: "string" }
