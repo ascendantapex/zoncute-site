@@ -10,7 +10,7 @@
  * Set two secrets after deploying (Cloudflare dashboard: Settings > Variables):
  *   GITHUB_CLIENT_ID
  *   GITHUB_CLIENT_SECRET
- */
+ */ 
 
 export default {
   async fetch(request, env) {
