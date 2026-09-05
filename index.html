@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zoncute</title>
+<style id="page-style">
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+
+  :root {
+    --bg: #F6F1E3;
+    --surface: #FFFEF9;
+    --surface-2: #ECE2C7;
+    --ink: #202D1B;
+    --ink-soft: #55624C;
+    --accent: #CE4A63;
+    --accent-ink: #FFFFFF;
+    --accent-2: #B9852B;
+    --violet: #7C5FA3;
+    --line: rgba(32,45,27,0.15);
+    --forest: #1D2A18;
+    --forest-2: #263A21;
+    --forest-ink: #F1ECDA;
+    --forest-line: rgba(241,236,218,0.16);
+    --shadow: 0 1px 2px rgba(29,42,24,0.06), 0 12px 28px -16px rgba(29,42,24,0.28);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12180F;
+      --surface: #1B2717;
+      --surface-2: #23301D;
+      --ink: #EFEADA;
+      --ink-soft: #ABB69E;
+      --accent: #F17E93;
+      --accent-ink: #221118;
+      --accent-2: #E7B34E;
+      --violet: #AB8FD1;
+      --line: rgba(239,234,218,0.14);
+      --forest: #0C110A;
+      --forest-2: #182412;
+      --forest-ink: #EFEADA;
+      --forest-line: rgba(239,234,218,0.14);
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 16px 32px -18px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12180F;
+    --surface: #1B2717;
+    --surface-2: #23301D;
+    --ink: #EFEADA;
+    --ink-soft: #ABB69E;
+    --accent: #F17E93;
+    --accent-ink: #221118;
+    --accent-2: #E7B34E;
+    --violet: #AB8FD1;
+    --line: rgba(239,234,218,0.14);
+    --forest: #0C110A;
+    --forest-2: #182412;
+    --forest-ink: #EFEADA;
+    --forest-line: rgba(239,234,218,0.14);
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 16px 32px -18px rgba(0,0,0,0.6);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Work Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; text-wrap: balance; margin: 0; }
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+
+  .topbar {
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 20;
+    backdrop-filter: blur(6px);
+  }
+  .topbar .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 16px; padding-bottom: 16px;
+  }
+  .wordmark {
+    font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.35rem;
+    letter-spacing: -0.01em;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .wordmark .dot { color: var(--accent); }
+  .wordmark img { width: 34px; height: 34px; border-radius: 50%; display: block; }
+  .footer-brand .wordmark img { width: 40px; height: 40px; }
+  .topbar nav { display: flex; gap: 28px; font-size: 0.92rem; color: var(--ink-soft); }
+  .topbar nav a { text-decoration: none; }
+  .topbar nav a:hover { color: var(--ink); }
+  .topbar nav a:focus-visible, a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px;
+  }
+
+  .hero {
+    background:
+      radial-gradient(ellipse 620px 420px at 88% -10%, rgba(206,74,99,0.20), transparent 60%),
+      radial-gradient(ellipse 500px 360px at 6% 0%, rgba(185,133,43,0.16), transparent 65%),
+      var(--forest);
+    color: var(--forest-ink);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-inner {
+    padding: 72px 0 64px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .eyebrow {
+    text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.74rem;
+    font-weight: 600; color: var(--accent-2);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; opacity: .8; }
+  .hero h1 {
+    font-size: clamp(2.1rem, 4vw, 3.15rem);
+    font-weight: 700;
+    line-height: 1.08;
+    margin: 18px 0 20px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); font-weight: 600; }
+  .hero p.lede {
+    max-width: 46ch; color: rgba(241,236,218,0.82); font-size: 1.05rem;
+  }
+  .hero-ctas { display: flex; gap: 14px; margin-top: 30px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 22px; border-radius: 3px; font-weight: 600; font-size: 0.95rem;
+    text-decoration: none; border: 1px solid transparent; cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary { background: var(--accent); color: var(--accent-ink); box-shadow: var(--shadow); }
+  .btn-primary:hover { transform: translateY(-1px); }
+  .btn-ghost { border-color: var(--forest-line); color: var(--forest-ink); }
+  .btn-ghost:hover { background: rgba(241,236,218,0.06); }
+  .btn svg { width: 15px; height: 15px; flex: none; }
+
+  .hero-plate {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--forest-line);
+    background: var(--forest-2);
+  }
+  .hero-plate img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-plate::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(12,17,10,0) 55%, rgba(12,17,10,0.55) 100%);
+  }
+
+  .trust-strip {
+    border-top: 1px solid var(--forest-line);
+    position: relative; z-index: 2;
+  }
+  .trust-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; background: var(--forest-line);
+  }
+  .trust-item {
+    background: var(--forest);
+    padding: 20px 22px;
+    display: flex; align-items: center; gap: 12px;
+    font-size: 0.87rem; color: rgba(241,236,218,0.85);
+  }
+  .trust-item svg { width: 19px; height: 19px; flex: none; color: var(--accent-2); }
+
+  .section { padding: 76px 0; }
+  .section-head { max-width: 62ch; margin-bottom: 44px; }
+  .section-head .eyebrow { color: var(--accent-2); }
+  .section-head h2 {
+    font-size: clamp(1.7rem, 2.6vw, 2.3rem); margin-top: 14px; font-weight: 700;
+  }
+  .section-head p { color: var(--ink-soft); margin-top: 12px; font-size: 1.02rem; max-width: 58ch; }
+
+  .catalog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+  }
+  .catalog.is-loading { min-height: 240px; display: flex; align-items: center; justify-content: center; color: var(--ink-soft); font-size: 0.9rem; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+  }
+  .card-media { position: relative; aspect-ratio: 1 / 1; background: var(--surface-2); }
+  .card-media img { width: 100%; height: 100%; object-fit: cover; }
+  .tag {
+    position: absolute; top: 14px; left: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem; letter-spacing: 0.05em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 2px; font-weight: 700;
+    color: var(--accent-ink);
+  }
+  .tag.daisy { background: var(--accent-2); }
+  .tag.pansy { background: var(--violet); }
+  .card-plate-no {
+    position: absolute; bottom: 12px; right: 14px;
+    font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+    color: var(--forest-ink); background: rgba(18,24,15,0.55);
+    padding: 3px 8px; border-radius: 2px; letter-spacing: 0.03em;
+  }
+  .card-body { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .card-title { font-size: 1.2rem; font-weight: 700; line-height: 1.25; }
+  .card-specs {
+    display: flex; flex-wrap: wrap; gap: 8px 16px;
+    font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--ink-soft);
+    letter-spacing: 0.01em; padding-bottom: 12px; border-bottom: 1px solid var(--line);
+  }
+  .card-specs span b { color: var(--ink); font-weight: 600; }
+  .feature-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+  .feature-list li { display: flex; gap: 10px; font-size: 0.9rem; color: var(--ink); align-items: flex-start; }
+  .feature-list svg { width: 14px; height: 14px; flex: none; margin-top: 4px; color: var(--accent-2); }
+  .card-footer {
+    margin-top: auto; padding-top: 6px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .price-block { display: flex; flex-direction: column; }
+  .price-now { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1.25rem; }
+  .price-was { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--ink-soft); text-decoration: line-through; }
+  .rating { font-size: 0.76rem; color: var(--ink-soft); margin-top: 3px; }
+  .rating .stars { color: var(--accent-2); letter-spacing: 1px; }
+  .card-cta {
+    background: var(--ink); color: var(--bg);
+    padding: 11px 18px; border-radius: 3px; font-weight: 600; font-size: 0.86rem;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 7px;
+    white-space: nowrap; transition: opacity .15s ease;
+  }
+  .card-cta:hover { opacity: 0.82; }
+  .card-cta svg { width: 13px; height: 13px; }
+
+  .why {
+    background: var(--forest); color: var(--forest-ink);
+  }
+  .why .section-head .eyebrow { color: var(--accent-2); }
+  .why .section-head h2, .why .section-head p { color: var(--forest-ink); }
+  .why .section-head p { color: rgba(241,236,218,0.75); }
+  .why-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
+  }
+  .why-item {
+    border: 1px solid var(--forest-line); border-radius: 4px; padding: 22px 20px;
+    background: var(--forest-2);
+  }
+  .why-item svg { width: 22px; height: 22px; color: var(--accent-2); margin-bottom: 14px; }
+  .why-item h3 { font-size: 1rem; font-weight: 700; color: var(--forest-ink); margin-bottom: 8px; }
+  .why-item p { font-size: 0.87rem; color: rgba(241,236,218,0.72); margin: 0; }
+
+  footer {
+    padding: 48px 0 40px; border-top: 1px solid var(--line);
+  }
+  .footer-row {
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; flex-wrap: wrap;
+  }
+  .footer-brand .wordmark { margin-bottom: 10px; }
+  .footer-brand p { color: var(--ink-soft); font-size: 0.88rem; max-width: 40ch; }
+  .footer-note {
+    font-size: 0.78rem; color: var(--ink-soft); font-family: 'JetBrains Mono', monospace;
+    text-align: right;
+  }
+
+  @media (max-width: 880px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-plate { max-width: 360px; }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .catalog { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-row { flex-direction: column; }
+    .footer-note { text-align: left; }
+    .topbar nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="wordmark"><img src="/images/logo.png" alt="Zoncute logo" />Zoncute</div>
+    <nav>
+      <a href="#catalogo">Products</a>
+      <a href="#por-que-amazon">Why Amazon</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow">Designed by Zoncute</div>
+      <h1>Silk flowers built to <em>outlast</em> the season — not just decorate it.</h1>
+      <p class="lede">Every arrangement on this page is a Zoncute original: UV-resistant faux silk daisies and pansies designed for porches, patios, and gardens across the U.S. See the details here, then complete your order safely on Amazon.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#catalogo">
+          Browse the bundles
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#por-que-amazon">Why we sell through Amazon</a>
+      </div>
+    </div>
+    <figure class="hero-plate">
+      <img src="/images/p3.jpg" alt="Zoncute artificial daisy bundles in a mixed color arrangement" />
+    </figure>
+  </div>
+  <div class="trust-strip">
+    <div class="wrap">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h13l3 4v6h-2M3 7v10h2m8-10v10M3 17a2 2 0 104 0M15 17a2 2 0 104 0"/></svg>
+          Sold &amp; shipped by Amazon
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V7l8-4z"/></svg>
+          Secure Amazon checkout
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12a9 9 0 109-9M3 12l3-3M3 12l3 3"/></svg>
+          Free 30-day returns
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+          Fast Prime shipping
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="catalogo">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The Zoncute catalog</div>
+      <h2>Bundles designed by Zoncute. Every listing verified on Amazon.</h2>
+      <p>We keep the specs short on purpose — the five facts that actually decide a purchase. Full photos, videos, and reviews are one click away on Amazon.</p>
+    </div>
+    <div class="catalog is-loading" id="catalog">Loading products…</div>
+  </div>
+</section>
+
+<section class="section why" id="por-que-amazon">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why we checkout through Amazon</div>
+      <h2>Not a workaround — the safer way to buy.</h2>
+      <p>Zoncute designs the flowers; Amazon handles the shipping, the payment, and the guarantee. That split keeps your purchase protected and our prices honest.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V7l8-4z"/></svg>
+        <h3>Buyer protection</h3>
+        <p>Every order is covered by Amazon's A-to-z Guarantee, separate from any promise we make here.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        <h3>Prime shipping</h3>
+        <p>Fast, trackable delivery on every listing, with the option for free shipping over $35.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12a9 9 0 109-9M3 12l3-3M3 12l3 3"/></svg>
+        <h3>Easy 30-day returns</h3>
+        <p>Not the right shade for your porch? Send it back — no questions, no shipping label to hunt for.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4zM4 6l8 6 8-6"/></svg>
+        <h3>Verified reviews</h3>
+        <p>Read real buyer photos and ratings on each listing before you decide — nothing curated here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <div class="wordmark"><img src="/images/logo.png" alt="Zoncute logo" />Zoncute</div>
+      <p>An independent home-décor brand designing UV-resistant artificial flowers. This page is informational — all purchases are completed securely on Amazon.com.</p>
+    </div>
+    <div class="footer-note">
+      zoncute.boutique<br />
+      Sold &amp; fulfilled by Amazon<br />
+      © 2026 Zoncute
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function money(n) {
+    var v = parseFloat(n);
+    if (isNaN(v)) v = 0;
+    return v.toFixed(2);
+  }
+  function stars(rating) {
+    var r = Math.max(0, Math.min(5, Math.round(parseFloat(rating) || 0)));
+    return "★".repeat(r) + "☆".repeat(5 - r);
+  }
+  function tagLabel(tag) {
+    return tag === "pansy" ? "Pansy" : "Daisy";
+  }
+  function featureListHTML(features) {
+    return (features || []).map(function (f) {
+      return '<li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg>' + esc(f) + "</li>";
+    }).join("");
+  }
+  function specsHTML(specs) {
+    return (specs || []).map(function (s) {
+      return "<span><b>" + esc(s.value) + "</b> " + esc(s.unit) + "</span>";
+    }).join("");
+  }
+  function cardHTML(p) {
+    return (
+      '<article class="card">' +
+        '<div class="card-media">' +
+          '<img src="' + esc(p.img) + '" alt="' + esc(p.alt || "") + '" loading="lazy" />' +
+          '<span class="tag ' + esc(p.tag) + '">' + tagLabel(p.tag) + "</span>" +
+          '<span class="card-plate-no">No. ' + esc(p.plateNo || "") + "</span>" +
+        "</div>" +
+        '<div class="card-body">' +
+          '<div class="card-title">' + esc(p.title) + "</div>" +
+          '<div class="card-specs">' + specsHTML(p.specs) + "</div>" +
+          '<ul class="feature-list">' + featureListHTML(p.features) + "</ul>" +
+          '<div class="card-footer">' +
+            '<div class="price-block">' +
+              '<span class="price-now">$' + money(p.priceNow) + "</span>" +
+              '<span class="price-was">$' + money(p.priceWas) + "</span>" +
+              '<span class="rating"><span class="stars">' + stars(p.rating) + "</span> " + esc(p.rating) + " (" + esc(p.reviews) + ")</span>" +
+            "</div>" +
+            '<a class="card-cta" href="' + esc(p.url) + '" target="_blank" rel="noopener">' +
+              "View on Amazon" +
+              '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10h12M11 5l5 5-5 5"/></svg>' +
+            "</a>" +
+          "</div>" +
+        "</div>" +
+      "</article>"
+    );
+  }
+
+  var catalogEl = document.getElementById("catalog");
+
+  fetch("products.json", { cache: "no-store" })
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      catalogEl.classList.remove("is-loading");
+      catalogEl.innerHTML = (data.products || []).map(cardHTML).join("");
+    })
+    .catch(function () {
+      catalogEl.innerHTML = "<p>We couldn't load the catalog right now — please refresh.</p>";
+    });
+})();
+</script>
+</body>
+</html>
