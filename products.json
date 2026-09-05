@@ -1,15 +1,15 @@
 {
   "products": [
     {
-      "priceWas": 24.99,
-      "img": "/images/p2.jpg",
-      "alt": "Zoncute 20-bundle daisy arrangement in red, purple, yellow and hot pink",
-      "priceNow": 19.99,
-      "url": "https://www.amazon.com/dp/B0GPH3V5ZQ",
+      "priceWas": 23.99,
+      "img": "/images/p1.jpg",
+      "alt": "Zoncute 12-bundle daisy arrangement in red, purple, yellow and hot pink",
+      "priceNow": 16.99,
+      "url": "https://www.amazon.com/dp/B0FJ1742MY",
       "plateNo": "01",
       "specs": [
         {
-          "value": "20",
+          "value": "12",
           "unit": "bundles"
         },
         {
@@ -21,18 +21,18 @@
           "unit": "H"
         }
       ],
-      "title": "Daisy Bundles — Classic Mix, Full 20-Pack",
+      "title": "Daisy Bundles — Classic Mix, 12-Pack",
       "tag": "daisy",
       "reviews": 29,
-      "id": "p2",
+      "id": "p1",
       "features": [
-        "Same faux silk daisy + eucalyptus design, sized for a fuller planter",
-        "5 Red, 5 Purple, 5 Yellow, 5 Hot Pink in every set",
-        "Ideal for larger beds, long window boxes, and front-yard displays",
-        "UV-resistant and weatherproof, built for year-round outdoor use",
-        "No watering or trimming — vibrant color with zero maintenance"
+        "Faux silk petals with realistic eucalyptus leaves for a natural finish",
+        "4 Red, 4 Purple, 4 Yellow, 4 Hot Pink — one balanced planter in a box",
+        "Works indoors or out: porch rails, patios, window boxes, table centerpieces",
+        "UV-resistant and weatherproof through sun, rain, and wind",
+        "Zero upkeep — no water, no trimming, no fading, ever"
       ],
-      "rating": 4.2
+      "rating": 4.4
     },
     {
       "priceWas": 24.99,
