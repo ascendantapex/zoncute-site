@@ -1,46 +1,12 @@
 {
   "products": [
     {
-      "priceWas": 23.99,
-      "img": "/images/p1.jpg",
-      "alt": "Zoncute 12-bundle daisy arrangement in red, purple, yellow and hot pink",
-      "priceNow": 16.99,
-      "url": "https://www.amazon.com/dp/B0FJ1742MY",
-      "plateNo": "01",
-      "specs": [
-        {
-          "value": "12",
-          "unit": "bundles"
-        },
-        {
-          "value": "4",
-          "unit": "colors"
-        },
-        {
-          "value": "13.8\"",
-          "unit": "H"
-        }
-      ],
-      "title": "Daisy Bundles — Classic Mix, 12-Pack",
-      "tag": "daisy",
-      "reviews": 29,
-      "id": "p1",
-      "features": [
-        "Faux silk petals with realistic eucalyptus leaves for a natural finish",
-        "4 Red, 4 Purple, 4 Yellow, 4 Hot Pink — one balanced planter in a box",
-        "Works indoors or out: porch rails, patios, window boxes, table centerpieces",
-        "UV-resistant and weatherproof through sun, rain, and wind",
-        "Zero upkeep — no water, no trimming, no fading, ever"
-      ],
-      "rating": 4.4
-    },
-    {
       "priceWas": 24.99,
       "img": "/images/p2.jpg",
       "alt": "Zoncute 20-bundle daisy arrangement in red, purple, yellow and hot pink",
       "priceNow": 19.99,
       "url": "https://www.amazon.com/dp/B0GPH3V5ZQ",
-      "plateNo": "02",
+      "plateNo": "01",
       "specs": [
         {
           "value": "20",
@@ -74,7 +40,7 @@
       "alt": "Zoncute 20-bundle six-color daisy blend",
       "priceNow": 19.99,
       "url": "https://www.amazon.com/dp/B0GJRPMMFY",
-      "plateNo": "03",
+      "plateNo": "02",
       "specs": [
         {
           "value": "20",
@@ -108,7 +74,7 @@
       "alt": "Zoncute pansy bundles in purple, yellow and white",
       "priceNow": 19.99,
       "url": "https://www.amazon.com/dp/B0GL377XZ4",
-      "plateNo": "04",
+      "plateNo": "03",
       "specs": [
         {
           "value": "20",
@@ -142,7 +108,7 @@
       "alt": "Zoncute pansy bundles in purple and white",
       "priceNow": 19.99,
       "url": "https://www.amazon.com/dp/B0GL3B1NV7",
-      "plateNo": "05",
+      "plateNo": "04",
       "specs": [
         {
           "value": "20",
