@@ -1,12 +1,12 @@
 {
   "products": [
     {
-      "id": "p1",
-      "tag": "daisy",
+      "priceWas": 23.99,
       "img": "/images/p1.jpg",
-      "plateNo": "01",
       "alt": "Zoncute 12-bundle daisy arrangement in red, purple, yellow and hot pink",
-      "title": "Daisy Bundles — Classic Mix, 12-Pack",
+      "priceNow": 16.99,
+      "url": "https://www.amazon.com/dp/B0FJ1742MY",
+      "plateNo": "01",
       "specs": [
         {
           "value": "12",
@@ -21,6 +21,10 @@
           "unit": "H"
         }
       ],
+      "title": "Daisy Bundles — Classic Mix, 12-Pack",
+      "tag": "daisy",
+      "reviews": 29,
+      "id": "p1",
       "features": [
         "Faux silk petals with realistic eucalyptus leaves for a natural finish",
         "4 Red, 4 Purple, 4 Yellow, 4 Hot Pink — one balanced planter in a box",
@@ -28,19 +32,15 @@
         "UV-resistant and weatherproof through sun, rain, and wind",
         "Zero upkeep — no water, no trimming, no fading, ever"
       ],
-      "priceNow": 16.99,
-      "priceWas": 23.99,
-      "rating": 4.2,
-      "reviews": 29,
-      "url": "https://www.amazon.com/dp/B0FJ1742MY"
+      "rating": 4.4
     },
     {
-      "id": "p2",
-      "tag": "daisy",
+      "priceWas": 24.99,
       "img": "/images/p2.jpg",
-      "plateNo": "02",
       "alt": "Zoncute 20-bundle daisy arrangement in red, purple, yellow and hot pink",
-      "title": "Daisy Bundles — Classic Mix, Full 20-Pack",
+      "priceNow": 19.99,
+      "url": "https://www.amazon.com/dp/B0GPH3V5ZQ",
+      "plateNo": "02",
       "specs": [
         {
           "value": "20",
@@ -55,6 +55,10 @@
           "unit": "H"
         }
       ],
+      "title": "Daisy Bundles — Classic Mix, Full 20-Pack",
+      "tag": "daisy",
+      "reviews": 29,
+      "id": "p2",
       "features": [
         "Same faux silk daisy + eucalyptus design, sized for a fuller planter",
         "5 Red, 5 Purple, 5 Yellow, 5 Hot Pink in every set",
@@ -62,19 +66,15 @@
         "UV-resistant and weatherproof, built for year-round outdoor use",
         "No watering or trimming — vibrant color with zero maintenance"
       ],
-      "priceNow": 19.99,
-      "priceWas": 24.99,
-      "rating": 4.2,
-      "reviews": 29,
-      "url": "https://www.amazon.com/dp/B0GPH3V5ZQ"
+      "rating": 4.2
     },
     {
-      "id": "p3",
-      "tag": "daisy",
+      "priceWas": 24.99,
       "img": "/images/p3.jpg",
-      "plateNo": "03",
       "alt": "Zoncute 20-bundle six-color daisy blend",
-      "title": "Daisy Bundles — Six-Color Blend, 20-Pack",
+      "priceNow": 19.99,
+      "url": "https://www.amazon.com/dp/B0GJRPMMFY",
+      "plateNo": "03",
       "specs": [
         {
           "value": "20",
@@ -89,6 +89,10 @@
           "unit": "H"
         }
       ],
+      "title": "Daisy Bundles — Six-Color Blend, 20-Pack",
+      "tag": "daisy",
+      "reviews": 29,
+      "id": "p3",
       "features": [
         "The widest color range in the line, still finished with eucalyptus leaves",
         "4 Pink, 4 Yellow, 3 Purple, 3 Dark Purple, 3 Red, 3 Hot Pink",
@@ -96,19 +100,15 @@
         "UV-resistant and weatherproof, holds its color outdoors all year",
         "Maintenance-free — arrange once, enjoy every season after"
       ],
-      "priceNow": 19.99,
-      "priceWas": 24.99,
-      "rating": 4.2,
-      "reviews": 29,
-      "url": "https://www.amazon.com/dp/B0GJRPMMFY"
+      "rating": 4.2
     },
     {
-      "id": "p4",
-      "tag": "pansy",
+      "priceWas": 24.99,
       "img": "/images/p4.jpg",
-      "plateNo": "04",
       "alt": "Zoncute pansy bundles in purple, yellow and white",
-      "title": "Pansy Bundles — Purple, Yellow & White",
+      "priceNow": 19.99,
+      "url": "https://www.amazon.com/dp/B0GL377XZ4",
+      "plateNo": "04",
       "specs": [
         {
           "value": "20",
@@ -123,6 +123,10 @@
           "unit": "H"
         }
       ],
+      "title": "Pansy Bundles — Purple, Yellow & White",
+      "tag": "pansy",
+      "reviews": 3,
+      "id": "p4",
       "features": [
         "Faux silk pansies with eucalyptus leaves — a softer, layered petal shape",
         "7 Purple, 7 Yellow, 6 White in one balanced 20-bundle set",
@@ -130,19 +134,15 @@
         "UV-resistant and weatherproof for sun, rain, and wind",
         "No watering, no trimming, no fading — set it and forget it"
       ],
-      "priceNow": 19.99,
-      "priceWas": 24.99,
-      "rating": 5.0,
-      "reviews": 3,
-      "url": "https://www.amazon.com/dp/B0GL377XZ4"
+      "rating": 5
     },
     {
-      "id": "p5",
-      "tag": "pansy",
+      "priceWas": 24.99,
       "img": "/images/p5.jpg",
-      "plateNo": "05",
       "alt": "Zoncute pansy bundles in purple and white",
-      "title": "Pansy Bundles — Purple & White Duo",
+      "priceNow": 19.99,
+      "url": "https://www.amazon.com/dp/B0GL3B1NV7",
+      "plateNo": "05",
       "specs": [
         {
           "value": "20",
@@ -157,6 +157,10 @@
           "unit": "H"
         }
       ],
+      "title": "Pansy Bundles — Purple & White Duo",
+      "tag": "pansy",
+      "reviews": 3,
+      "id": "p5",
       "features": [
         "Same faux silk pansy design, narrowed to a clean two-tone palette",
         "10 Purple & 10 White — an easy match for most porch color schemes",
@@ -164,11 +168,7 @@
         "UV-resistant and weatherproof, built to stay outdoors year-round",
         "Maintenance-free color that won't water-stain or wilt"
       ],
-      "priceNow": 19.99,
-      "priceWas": 24.99,
-      "rating": 5.0,
-      "reviews": 3,
-      "url": "https://www.amazon.com/dp/B0GL3B1NV7"
+      "rating": 5
     }
   ]
 }
