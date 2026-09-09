@@ -135,6 +135,142 @@
         "Maintenance-free color that won't water-stain or wilt"
       ],
       "rating": 5
+    },
+    {
+      "priceWas": 14.99,
+      "img": "/images/p6.jpg",
+      "alt": "Zoncute 12-bundle orange daisy arrangement",
+      "priceNow": 11.99,
+      "url": "https://www.amazon.com/dp/B0FFZV7LG7",
+      "plateNo": "05",
+      "specs": [
+        {
+          "value": "12",
+          "unit": "bundles"
+        },
+        {
+          "value": "1",
+          "unit": "color"
+        },
+        {
+          "value": "11.8\"",
+          "unit": "H"
+        }
+      ],
+      "title": "Daisy Bundles — Classic Mix, 12-Pack (Orange)",
+      "tag": "daisy",
+      "reviews": 46,
+      "id": "p6",
+      "features": [
+        "Bright orange faux silk blooms with a realistic finish",
+        "12 bundles in one box — ready for planters, pots, or hanging baskets",
+        "UV-resistant and weatherproof through sun, wind, and rain",
+        "Flexible stems for custom arrangements indoors or out",
+        "Zero upkeep — no water, no trimming, no fading"
+      ],
+      "rating": 4.6
+    },
+    {
+      "priceWas": 14.99,
+      "img": "/images/p7.jpg",
+      "alt": "Zoncute 12-bundle white daisy arrangement",
+      "priceNow": 11.99,
+      "url": "https://www.amazon.com/dp/B0FFZX1D5C",
+      "plateNo": "06",
+      "specs": [
+        {
+          "value": "12",
+          "unit": "bundles"
+        },
+        {
+          "value": "1",
+          "unit": "color"
+        },
+        {
+          "value": "11.8\"",
+          "unit": "H"
+        }
+      ],
+      "title": "Daisy Bundles — Classic Mix, 12-Pack (White)",
+      "tag": "daisy",
+      "reviews": 46,
+      "id": "p7",
+      "features": [
+        "Pure white faux silk blooms for a clean, classic look",
+        "12 bundles — ideal for weddings, ceremonies, or minimalist decor",
+        "UV-resistant and weatherproof for indoor or outdoor use",
+        "Authentic silk texture for a realistic touch",
+        "Flexible stems for easy DIY arrangements"
+      ],
+      "rating": 4.6
+    },
+    {
+      "priceWas": 11.99,
+      "img": "/images/p8.jpg",
+      "alt": "Zoncute 12-bundle red daisy arrangement",
+      "priceNow": 11.99,
+      "url": "https://www.amazon.com/dp/B0FFZV5RQC",
+      "plateNo": "07",
+      "specs": [
+        {
+          "value": "12",
+          "unit": "bundles"
+        },
+        {
+          "value": "1",
+          "unit": "color"
+        },
+        {
+          "value": "11.8\"",
+          "unit": "H"
+        }
+      ],
+      "title": "Daisy Bundles — Classic Mix, 12-Pack (Red)",
+      "tag": "daisy",
+      "reviews": 46,
+      "id": "p8",
+      "features": [
+        "Bold red faux silk blooms with a realistic finish",
+        "12 bundles — perfect for porch, patio, or seasonal displays",
+        "UV-resistant and weatherproof through sun, wind, and rain",
+        "Flexible stems for large arrangements or mixed bouquets",
+        "Zero upkeep — no water, no trimming, no fading"
+      ],
+      "rating": 4.6
+    },
+    {
+      "priceWas": 14.99,
+      "img": "/images/p9.jpg",
+      "alt": "Zoncute 12-bundle yellow daisy arrangement",
+      "priceNow": 11.99,
+      "url": "https://www.amazon.com/dp/B0FFZWS3KK",
+      "plateNo": "08",
+      "specs": [
+        {
+          "value": "12",
+          "unit": "bundles"
+        },
+        {
+          "value": "1",
+          "unit": "color"
+        },
+        {
+          "value": "11.8\"",
+          "unit": "H"
+        }
+      ],
+      "title": "Daisy Bundles — Classic Mix, 12-Pack (Yellow)",
+      "tag": "daisy",
+      "reviews": 46,
+      "id": "p9",
+      "features": [
+        "Bright yellow faux silk blooms with a realistic finish",
+        "12 bundles — instant color for planters, pots, or hanging baskets",
+        "UV-resistant and weatherproof through sun, wind, and rain",
+        "Flexible stems for custom arrangements indoors or out",
+        "Low-maintenance color that lasts all year"
+      ],
+      "rating": 4.6
     }
   ]
 }
