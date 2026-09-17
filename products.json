@@ -271,6 +271,74 @@
         "Low-maintenance color that lasts all year"
       ],
       "rating": 4.6
+    },
+    {
+      "priceWas": 19.99,
+      "img": "/images/p10.jpg",
+      "alt": "Zoncute 20-bundle fall daisy arrangement in orange, yellow and burgundy",
+      "priceNow": 19.99,
+      "url": "https://www.amazon.com/dp/B0HJM46R59",
+      "plateNo": "09",
+      "specs": [
+        {
+          "value": "20",
+          "unit": "bundles"
+        },
+        {
+          "value": "3",
+          "unit": "colors"
+        },
+        {
+          "value": "13.8\"",
+          "unit": "H"
+        }
+      ],
+      "title": "Daisy Bundles — Fall Mix, 20-Pack",
+      "tag": "daisy",
+      "reviews": 29,
+      "id": "p10",
+      "features": [
+        "Faux silk daisies with realistic eucalyptus leaves for a natural finish",
+        "Warm fall palette — orange, yellow, and burgundy in one 20-bundle set",
+        "Built for porches, patios, planters, and Thanksgiving displays",
+        "UV-resistant and weatherproof through sun, rain, and wind",
+        "Zero upkeep, no water, no trimming, no fading, ever"
+      ],
+      "rating": 4.4
+    },
+    {
+      "priceWas": 19.99,
+      "img": "/images/p11.jpg",
+      "alt": "Zoncute 20-bundle fall pansy arrangement in purple, yellow and white",
+      "priceNow": 19.99,
+      "url": "https://www.amazon.com/dp/B0HJMKFNW6",
+      "plateNo": "10",
+      "specs": [
+        {
+          "value": "20",
+          "unit": "bundles"
+        },
+        {
+          "value": "3",
+          "unit": "colors"
+        },
+        {
+          "value": "14.2\"",
+          "unit": "H"
+        }
+      ],
+      "title": "Pansy Bundles — Fall Mix, 20-Pack",
+      "tag": "pansy",
+      "reviews": 4,
+      "id": "p11",
+      "features": [
+        "Faux silk pansies with realistic eucalyptus leaves for a layered, natural finish",
+        "Warm fall color blend across a full 20-bundle set",
+        "Fits porches, patios, garden beds, and window boxes alike",
+        "UV-resistant and weatherproof for sun, rain, and wind",
+        "No watering, no trimming, no fading, set it and forget it"
+      ],
+      "rating": 5
     }
   ]
 }
